@@ -1,0 +1,205 @@
+<%- include ('partials/header'); -%>
+
+  <link rel="stylesheet" href="/css/modal.css">
+  </head>
+
+  <body onload="showSignUpLoginModal(<%=showModal%>)">
+
+    <%- include ('partials/nav_bar_modal'); -%>
+
+      <div class="container-fluid fh5co-home-banner">
+        <!--*** Resize got problem-->
+        <div class="card"> <img class="card-img" src="/img/background.JPG" alt="">
+          <div class="card-img-overlay">
+            <div class="center-text">
+              <h2 class="card-title">TechTa</h2>
+              <blockquote class="blockquote text-center">
+                <p class="mb-0">“Data is the new oil? No, data is the new soil.”</p>
+                <footer class="blockquote-footer" id="citation">David McCandless, <cite title="Source Title">TED
+                    Talk,
+                    the
+                    Beauty of Data Visualization” 2010</cite></footer>
+              </blockquote>
+              <br>
+              <h3>Then, TechTa is where your land starts to grow.</h3>
+              <!--a href="#about" class="btn">
+                <svg width="201" height="51" viewBox="0 0 201 51">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                        stroke-width: 1px;
+                        stroke: url(#linear-gradient);
+                      }
+                    </style>
+                    <linearGradient id="linear-gradient" x1="140.508" y1="50.5" x2="60.492" y2="0.5"
+                      gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#e90e65" />
+                      <stop offset="1" stop-color="#fff" />
+                    </linearGradient>
+                  </defs>
+                  <rect id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" x="0.5" y="0.5"
+                    width="200" height="50" rx="25" ry="25" />
+                </svg>
+                Explore</a-->
+            </div>
+          </div>
+        </div>
+        <!--*** Resize got problem ends here-->
+
+      </div>
+
+
+      <div class="container-fluid fh5co-recent-work">
+        <div class="container contact-pop">
+          <div class="row">
+            <div class="col-md-6  pr-0">
+              <!-- *** Change picture-->
+              <div class="card"> <img class="card-img w-100" src="/img/datatech.png" alt="">
+              </div>
+            </div>
+            <div class="col-md-6 pl-0" id="about">
+              <div class="content">
+                <h3>WE ARE DATATECH™</h3>
+                <h4>Professional Datanistas</h4>
+                <hr />
+                <p>Collecting, analyzing, pres enting data are what we do best! If you have data, we guarantee that we
+                  can
+                  find things you would have never thought of.</p>
+                <p>For further enquiries, please contact us via email.</p>
+                <a href="mailto: techta62@gmail.com" class="btn">CONTACT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container recent" id="activity">
+          <div class="row">
+            <!--DataSet-->
+            <h2>DataSets</h2>
+            <div class="owl-carousel owl-carousel2 owl-theme">
+              <div>
+                <!-- ***Try make the card below to appear in white and not grey-->
+                <div class="card">
+                  <!-- This div is intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+                  <div class="overlay"></div>
+
+                  <!-- The HTML5 video element that will create the background video on the header -->
+                  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    <source src="/img/coronavirus_card_vid.mp4" type="video/mp4">
+                  </video>
+                  <div class="card-img-overlay">
+                    <div class="bottom-text">
+                      <h5 class="card-title">Covid-19</h5>
+                      <a href="/datasets/covid19">Read more <img src="/img/double-right.svg" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card"> <img class="card-img" src="/img/dataset3.jpg" alt="">
+                  <div class="card-img-overlay">
+                    <div class="bottom-text">
+                      <h5 class="card-title">Coming Soon</h5>
+                      <!-- <a href="">Read more <img src="/img/double-right.svg" alt=""></a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card"> <img class="card-img" src="/img/dataset2.jpg" alt="">
+                  <div class="card-img-overlay">
+                    <div class="bottom-text">
+                      <h5 class="card-title">Coming Soon</h5>
+                      <!-- <a href="">Read more <img src="/img/double-right.svg" alt=""></a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <!-- ***Put a QUESTION MARK photo-->
+                <div class="card"> <img class="card-img" src="/img/dataset4.jpg" alt="">
+                  <div class="card-img-overlay">
+                    <div class="bottom-text">
+                      <h5 class="card-title">Coming Soon</h5>
+                      <!-- <a href="">Read more <img src="/img/double-right.svg" alt=""></a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="container-fluid fh5co-about-me" id="testimonial">
+        <div id="my-carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="card"> <img class="card-img d-block w-100" src="/img/wires1.jpg" alt="">
+              <div class="card-img-overlay">
+                <h2>Why Choose TechTa?</h2>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-caption d-md-block"> <img src="/img/quote-icon.png" alt="">
+                <p>TechTa has provided me amazing service as promised! Found out that there is a higher chance of
+                  survival
+                  if I warmed up before doing stunts. Totally mindblowing!</p>
+              </div>
+            </div>
+            <div class="carousel-item active">
+              <div class="carousel-caption d-md-block"> <img src="/img/quote-icon.png" alt="">
+                <p>TechTa has helped make possible the launching of SpaceZ's shuttles into space. If that does not
+                  convince
+                  you enough, then I don't know what will.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="carousel-caption d-md-block"> <img src="/img/quote-icon.png" alt="">
+                <p>TechTa has made my concerts sell out faster than usual as they have shown the best spots to organize
+                  my
+                  concerts. All with the magic of data analyzing. 10/10 would recommend.</p>
+              </div>
+            </div>
+          </div>
+          <ol class="carousel-indicators">
+            <!--***Characteristic 1 picture-->
+            <li data-target="#my-carousel" data-slide-to="0"> <img src="/img/dr1.png">
+              <span>Dr. Jackson Chan</span>
+            </li>
+            <!--***Characteristic 2 picture-->
+            <li class="active" data-target="#my-carousel" data-slide-to="1" aria-current="location"> <img
+                src="/img/dr2.png"> <span>Dr. Elog Tusk</span> </li>
+            <!--***Characteristic 3 picture-->
+            <li data-target="#my-carousel" data-slide-to="2"> <img src="/img/dr3.png">
+              <span>Brittany Swords</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!--Find us on social media-->
+      <div class="container-fluid fh5co-insta-feed activity">
+        <div class="container recent">
+          <h2 class="text-center d-block" id="contact">Find us on social media</h2>
+          <div class="row social-links">
+            <ul class="nav mx-auto">
+              <li class="nav-item"> <a class="nav-link" href="https://www.facebook.com"><img src="/img/facebook.png"
+                    alt=""></a> </li>
+              <li class="nav-item"> <a class="nav-link" href="https://twitter.com"><img src="/img/twitter.png"
+                    alt=""></a>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="https://pinterest.com"><img src="/img/pinterest.png"
+                    alt=""></a> </li>
+              <li class="nav-item"> <a class="nav-link" href="https://accounts.google.com/servicelogin"><img
+                    src="/img/google-plus.png" alt=""></a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <%- include ('partials/footer'); -%>
+        <script src="/js/modal.js"></script>
+  </body>
+
+  </html>

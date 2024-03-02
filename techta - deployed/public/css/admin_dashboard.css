@@ -1,0 +1,76 @@
+.general-container {
+  margin-top: 4em;
+}
+
+body {
+    background-image: url("../img/Analytics_background.jpg");
+    background-color: #141414;
+    color: white;
+  }
+
+  #logoutModal:not(#logoutModalBtn){
+    color: black;
+  }
+
+
+  .icon-space{
+    height: 10rem;
+  }
+
+  .icon-space > i{
+    position:relative;
+    top: calc(50% - 10px); /* 50% - 3/4 of icon height */
+    color: white;
+}
+
+.card-deck .card:hover {
+    transform:scale(1.1);
+  }
+
+.card-deck .card{
+    border-radius: 25px;
+    width: 25em;
+    height: 9em;
+    color: white;
+  }
+
+.card-deck .total-visits{
+  background: #360033;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card-deck .unique-visitor{
+  background: #C04848;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.table-card {
+    background: #23242e;
+    border: 0;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 20px 0px rgb(0 0 0 / 10%);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    border-radius: 0.2857rem;
+}
+
+th{
+    color: rgb(175, 168, 168)
+}
+
+.btn-outline-primary {
+  color: #e90e65;
+  background-color: transparent;
+  background-image: none;
+  border-color: #e90e65;
+}
+
+.btn-outline-primary:hover {
+  background-color: #e90e65;
+}
