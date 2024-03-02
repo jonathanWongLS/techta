@@ -1,0 +1,249 @@
+<%- include ('partials/header'); -%>
+
+    <link rel="stylesheet" type="text/css" href="/css/analytics.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <%- include ('partials/nav_bar_modal'); -%>
+
+        <!--Header section-->
+        <!--Use .container-fluid for a full width container, spanning the entire width of the viewport.-->
+        <!--make padding in x-axis = 0px-->
+        <section class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <!--text-white makes the text in white color-->
+                    <!--by default it is not shown-->
+                    <!--will only get displayed in large screen and above-->
+                    <!--mt-5 is margin top = 5px-->
+                    <div class="container h-100 mt-5">
+                        <div class="d-flex h-100 align-items-center">
+                            <div class="w-100 text-white">
+                                <img src="/img/covid_title.png">
+                                <p class="lead mb-0 subtitle" style="font-size: 0.9rem;">A Complete CoronaVirus Database
+                                </p>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <h5 style="color: white;">
+                            Top 5 Country Ranking by Total Cases
+                        </h5>
+                        <!--Top Country will displayed here -->
+                        <table rules=none style="font-size: 0.9rem;">
+                            <tr>
+                                <td style="width: 150px;">
+
+                                    <li style="color: red;"><span id="1"></span></li>
+                                </td>
+                                <td id="CaseNo1"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li style="color: orange;"><span id="2"></span></li>
+                                </td>
+                                <td id="CaseNo2"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li style="color: yellow;"><span id="3"></span></li>
+                                </td>
+                                <td id="CaseNo3"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li style="color: green;"><span id="4"></span></li>
+                                </td>
+                                <td id="CaseNo4"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <li style="color: cyan;"><span id="5"></span></li>
+                                </td>
+                                <td id="CaseNo5"></td>
+                            </tr>
+                        </table>
+
+                        <div class="card-deck">
+                            <div class="card text-center total-cases">
+                                <div class="icon-space"><i class="fas fa-viruses"></i></div>
+                                <div class="card-body">
+                                    <h6 class="card-title text-white" id="totalCases"></h6>
+                                    <p class="card-text text-center">Total Cases</p>
+                                </div>
+                            </div>
+                            <div class="card text-center total-recovered">
+                                <div class="icon-space"><i class="fas fa-file-medical"></i></div>
+                                <div class="card-body">
+                                    <h6 class="card-title text-white" id="totalRecovered"></h6>
+                                    <p class="card-text text-center">Total Recovered</p>
+                                </div>
+                            </div>
+                            <div class="card text-center total-death">
+                                <div class="icon-space"><i class="fas fa-skull-crossbones"></i></div>
+                                <div class="card-body">
+                                    <h6 class="card-title text-white" id="totalDeath"></h6>
+                                    <p class="card-text text-center">Total Death</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 mt-5">
+                    <!--use img-fluid to make the image responsive to the screen size-->
+                    <section class="WorldMap-Map">
+                        <div class="container-sm">
+                            <div id="map">
+                                <!--This is where the World Map API Goes-->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <br>
+
+        <!--Covid By Continent Subheader-->
+        <section class="CovidByContinent-header pt-1 pb-1 pt-md-3 pb-md-3">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col 12 text-center">
+                        <h3>
+                            COVID-19 by Continents
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Covid By Continent Graphs-->
+        <section class="container">
+            <section class="Continent-graphs">
+                <div class="container-sm">
+                    <div class="row align-items-center" id="continent-charts">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5" id="bubble-bar-charts">
+                            <!--This is where the Covid by Continent graph 1 goes-->
+                            <div id="barChart">
+
+                            </div>
+                            <!--This is where the Covid by Continent graph 2 goes-->
+                            <div id="bubbleChart">
+
+                            </div>
+                        </div>
+                        <div class="col-xs-0 col-sm-0 col-md-0 col-lg-1" id="chart-space"></div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6" id="columnChart">
+                            <!--This is where the Covid by Continent graph 3 goes-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!--Covid By Country Subheader-->
+        <section class="CovidByCountry-header pt-1 pb-1 pt-md-3 pb-md-3">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col 12 text-center">
+                        <h3>
+                            COVID-19 By Country
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Country Selection Button-->
+        <section class="select_country_button">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Country</a>
+                        <!--List of countries go here-->
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="countryList">
+                            <% countriesDataList.forEach((countryName)=> { %>
+                                <a class="dropdown-item" onclick="getCountry('<%=countryName%>')"><%=countryName%></a>
+                                <% }); %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <section class="container">
+                <!--Covid By Country Graph 1-->
+                <section class="covid_country_graph_1">
+                    <div class="row">
+                        <!--Total Numbers-->
+                        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-4 padding-0">
+                            <h4 class="stat-num" id="confirm">0</h4>
+                            <p class="stat-title">
+                                Total Cases
+                            </p>
+                        </div>
+                        <div class="col-xl-10 col-lg-9 col-md-9 col-sm-8 col-8 image " id="totalCasesCountry">
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="container">
+                <!--Covid By Country Graph 2-->
+                <section class="covid_country_graph_2">
+                    <div class="row">
+                        <!--Total Numbers-->
+                        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-4 padding-0">
+                            <h4 class="stat-num" id="vaccinated">0</h4>
+                            <p class="stat-title">
+                                Total Vaccination
+                            </p>
+
+                        </div>
+                        <div class="col-xl-10 col-lg-9 col-md-9 col-sm-8 col-8 image " id="totalVaccinationCountry">
+                            
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+
+            <section class="container">
+                <!--Covid By Country Graph 3-->
+                <section class="covid_country_graph_3">
+                    <div class="row">
+                        <!--Total Numbers-->
+                        <div class="col-xl-2 col-lg-3 col-md-3 col-sm-4 col-4 padding-0">
+                            <h4 class="stat-num" id="death">0</h4>
+                            <p class="stat-title">
+                                Total Death
+                            </p>
+
+                        </div>
+                        <div class="col-xl-10 col-lg-9 col-md-9 col-sm-8 col-8 image " id="totalDeathCountry">
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+
+        <%- include ('partials/footer'); -%>
+            <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+            <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+            <script src="/js/global.js"></script>
+            <script src="/js/continent.js"></script>
+            <script src="/js/country.js"></script>
+
+    </body>
+
+    </html>
