@@ -8,7 +8,7 @@
 
 # What can be Found 
 1. Project Inception 
-2. techta - deployed [Deployment on Heroku at https://datatech-techta.herokuapp.com/]
+2. techta - deployed [Deployment on Heroku at https://datatech-techta.herokuapp.com/] - Not hosted on Heroku anymore
 3. techta - local    [Testing on Localhost]
 
 # Collaboration tool used by the team
